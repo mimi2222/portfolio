@@ -3,45 +3,131 @@ body, h1, h2, h3, p, ul, li, nav, section, article {
     margin: 0;
     padding: 0;
     list-style: none;
+    color:black;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    font-family:YuGothic;
     line-height: 1.6;
 }
 
 /* レイアウト */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 1.5rem;
     text-align: center;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin-right: 4rem;
 }
 
 nav ul li a {
-    color: #fff;
+    color: black;
     text-decoration: none;
+    font-weight: 500;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    font-family: Inter;
 }
 
 main {
-    padding: 20px;
+    padding: 1rem;
 }
 
-footer {
-    background: #333;
-    color: #fff;
+#intro{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* 中央揃え */
+    justify-content: space-evenly;
+}
+
+.text h1{
+    text-align: center;
+    padding: 1rem; 
+    font-size: 3rem;
+    font-family: Inter;
+    color: #000;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1px;
+}
+
+.img img {
+    width: 24rem; /* 画像の幅を設定 */
+    height: auto; /* 画像の高さを自動調整 */
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+#profile{
+    color: #828282;
+    margin-left:18rem;
+    margin-right:20rem;
+    margin-top:10rem;
+    margin-bottom:10rem;
+    font-family: Inter;
+}
+
+#profile h3{
+    padding: 1rem; 
+    font-size: 1.5rem;
+    color: #b2b2b2;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+#profile .text p{
+    padding: 0.1rem; 
+    font-size: 1rem;
+    color: #b2b2b2;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.divider {
+    border-top: 1px solid #e6e6e6; /* 灰色の薄い線 */
+    margin-bottom: 2rem; /* フッターとの間隔 */
+}
+  
+
+footer{
+    margin-left: 4rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: black;
     text-align: center;
     padding: 1rem;
-    position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+
+#projects{
+    color: #000;
+    margin: 5rem;
+    font-family: Inter;
+}
+
+#projects h2{
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1px;
 }
