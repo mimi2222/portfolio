@@ -1,0 +1,11 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "mimilog",
+    "scripts": {
+      "start": "live-server"
+    },
+    "devDependencies": {
+      "live-server": "^1.2.1"
+    }
+}
