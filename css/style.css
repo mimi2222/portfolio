@@ -118,16 +118,59 @@ footer{
 }
 
 
-#projects{
+#projects, #blog{
     color: #000;
     margin: 5rem;
     font-family: Inter;
 }
 
-#projects h2{
-    font-size: 2rem;
+#projects h2,#projects p, #blog h2,#blog p{
+    margin-left: 3rem;
+}
+
+#projects h2, #blog h2{
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: -1px;
+}
+
+#projects p, #blog p{
+    margin-top:2rem;
+    margin-bottom: 5rem;
+}
+
+#projects .article, #blog .article{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects .article article, #blog .article article{
+    flex-basis: 50%; /* 2列レイアウト */
+    text-align: center;
+}
+
+#projects .article article h3, #blog .article article h3{
+    margin:1rem;
+    font-size:1rem;
+}
+
+#projects .article article p, #blog .article article p{
+    margin-left:0rem;
+    font-size:1rem;
+}
+
+#projects .article article img{
+    width: 35rem; /* 画像の幅を設定 */
+    height: 20rem; /* 画像の高さを自動調整 */
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+#blog .article article img{
+    width: 25rem; /* 画像の幅を設定 */
+    height: 25rem; /* 画像の高さを自動調整 */
+    border-radius: 8px;
+    flex-shrink: 0;
 }
