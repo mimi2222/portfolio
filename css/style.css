@@ -146,8 +146,13 @@ footer{
     flex-wrap: wrap;
 }
 
-#projects .article article, #blog .article article{
+#projects .article article{
     flex-basis: 50%; /* 2列レイアウト */
+    text-align: center;
+}
+
+#blog .article article{
+    flex-basis: 33.333%;
     text-align: center;
 }
 
@@ -168,9 +173,72 @@ footer{
     flex-shrink: 0;
 }
 
+#projects .article a:hover, #blog .article a:hover{
+    border: none;
+    cursor: pointer;
+}
+
+#projects .article img:hover, #blog .article img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+    transition: background-color 0.5s;
+}
+
 #blog .article article img{
-    width: 25rem; /* 画像の幅を設定 */
-    height: 25rem; /* 画像の高さを自動調整 */
+    width: 20rem; /* 画像の幅を設定 */
+    height: 20rem; /* 画像の高さを自動調整 */
     border-radius: 8px;
     flex-shrink: 0;
+}
+
+#contact {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #003d82;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.fade-in.active {
+    opacity: 1;
 }
