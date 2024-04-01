@@ -156,6 +156,11 @@ footer{
     text-align: center;
 }
 
+#blog .article article{
+    flex-basis: 33.333%;
+    text-align: center;
+}
+
 #projects .article article h3, #blog .article article h3{
     margin:1rem;
     font-size:1rem;
@@ -171,6 +176,17 @@ footer{
     height: 20rem; /* 画像の高さを自動調整 */
     border-radius: 8px;
     flex-shrink: 0;
+}
+
+#projects .article a:hover, #blog .article a:hover{
+    border: none;
+    cursor: pointer;
+}
+
+#projects .article img:hover, #blog .article img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+    transition: background-color 0.5s;
 }
 
 #projects .article a:hover, #blog .article a:hover{
