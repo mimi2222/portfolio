@@ -118,13 +118,13 @@ footer{
 }
 
 
-#projects, #blog{
+#projects, #blog, #contact{
     color: #000;
     margin: 5rem;
     font-family: Inter;
 }
 
-#projects h2,#projects p, #blog h2,#blog p{
+#projects h2,#projects p, #blog h2,#blog p, #contact{
     margin-left: 3rem;
 }
 
@@ -146,8 +146,13 @@ footer{
     flex-wrap: wrap;
 }
 
-#projects .article article, #blog .article article{
+#projects .article article{
     flex-basis: 50%; /* 2列レイアウト */
+    text-align: center;
+}
+
+#blog .article article{
+    flex-basis: 33.333%;
     text-align: center;
 }
 
@@ -168,9 +173,47 @@ footer{
     flex-shrink: 0;
 }
 
+#projects .article a:hover, #blog .article a:hover{
+    border: none;
+    cursor: pointer;
+}
+
+#projects .article img:hover, #blog .article img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+    transition: background-color 0.5s;
+}
+
 #blog .article article img{
-    width: 25rem; /* 画像の幅を設定 */
-    height: 25rem; /* 画像の高さを自動調整 */
+    width: 20rem; /* 画像の幅を設定 */
+    height: 20rem; /* 画像の高さを自動調整 */
     border-radius: 8px;
     flex-shrink: 0;
+}
+
+#contact{
+    align-items: center;
+}
+
+.embed{
+    display: flex;
+    justify-content: center; /* 水平方向の中央揃え */
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.fade-in.active {
+    opacity: 1;
+}
+.scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll.active {
+    opacity: 1;
+    transform: none;
 }
