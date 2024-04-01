@@ -124,7 +124,7 @@ footer{
     font-family: Inter;
 }
 
-#projects h2,#projects p, #blog h2,#blog p, #contact{
+#projects h2,#projects p, #blog h2, #contact, #blog .blogContent{
     margin-left: 3rem;
 }
 
@@ -206,6 +206,18 @@ footer{
     border-radius: 8px;
     flex-shrink: 0;
 }
+
+#blog .blogContent .images{
+    text-align: center;
+}
+
+#blog .blogContent .images img{
+    width: 25rem; /* 画像の幅を設定 */
+    height: 25rem; /* 画像の高さを自動調整 */
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
 
 #contact{
     align-items: center;
