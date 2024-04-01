@@ -200,19 +200,26 @@ footer{
     letter-spacing: -1px;
 }
 
+#contact{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
 .name {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly; /* フィールド間に均等なスペースを設定 */
 }
 
 .field {
     display: flex;
+    flex-direction: row;
     align-items: center; /* ラベルと入力フィールドを縦方向の中央揃えに */
 
 }
 
 /* その他のスタイル */
-/*
+
 #contact input[type="text"],
 #contact input[type="email"] {
     width: 100%; 
@@ -221,7 +228,7 @@ footer{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-*/
+
 
 
 #contact .message textarea {
