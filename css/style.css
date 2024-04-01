@@ -118,13 +118,13 @@ footer{
 }
 
 
-#projects, #blog{
+#projects, #blog, #contact{
     color: #000;
     margin: 5rem;
     font-family: Inter;
 }
 
-#projects h2,#projects p, #blog h2,#blog p{
+#projects h2,#projects p, #blog h2,#blog p, #contact{
     margin-left: 3rem;
 }
 
@@ -191,17 +191,48 @@ footer{
     flex-shrink: 0;
 }
 
-#contact {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+#contact h2{
+    text-align:center;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1px;
 }
 
-h2 {
-    color: #333;
+.name {
+    display: flex;
+    justify-content: space-evenly; /* フィールド間に均等なスペースを設定 */
 }
+
+.field {
+    display: flex;
+    align-items: center; /* ラベルと入力フィールドを縦方向の中央揃えに */
+
+}
+
+/* その他のスタイル */
+/*
+#contact input[type="text"],
+#contact input[type="email"] {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+*/
+
+
+#contact .message textarea {
+    width: 100%; /* 幅をコンテナに合わせて調整 */
+    height: 10rem; /* 高さを指定 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* ユーザーが縦方向にサイズ調整可能に */
+}
+
 
 .form-group {
     margin-bottom: 20px;
