@@ -141,7 +141,7 @@ footer{
     margin-bottom: 5rem;
 }
 
-#projects .article, #blog .article{
+#projects .article, #blog .article, #blog .blogContent .contents{
     display: flex;
     flex-wrap: wrap;
 }
@@ -151,22 +151,17 @@ footer{
     text-align: center;
 }
 
-#blog .article article{
+#blog .article article, #blog .blogContent .contents article{
     flex-basis: 33.333%;
     text-align: center;
 }
 
-#blog .article article{
-    flex-basis: 33.333%;
-    text-align: center;
-}
-
-#projects .article article h3, #blog .article article h3{
+#projects .article article h3, #blog .article article h3, #blog .blogContent .contents article h3{
     margin:1rem;
     font-size:1rem;
 }
 
-#projects .article article p, #blog .article article p{
+#projects .article article p, #blog .article article p, #blog .blogContent .contents article p{
     margin-left:0rem;
     font-size:1rem;
 }
@@ -178,29 +173,19 @@ footer{
     flex-shrink: 0;
 }
 
-#projects .article a:hover, #blog .article a:hover{
+#projects .article a:hover, #blog .article a:hover, #blog .blogContent .contents a:hover{
     border: none;
     cursor: pointer;
 }
 
-#projects .article img:hover, #blog .article img:hover{
+#projects .article img:hover, #blog .article img:hover, #blog .blogContent .contents img:hover{
     transform: scale(1.05);
     box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
     transition: background-color 0.5s;
 }
 
-#projects .article a:hover, #blog .article a:hover{
-    border: none;
-    cursor: pointer;
-}
 
-#projects .article img:hover, #blog .article img:hover{
-    transform: scale(1.05);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
-    transition: background-color 0.5s;
-}
-
-#blog .article article img{
+#blog .article article img, #blog .blogContent .contents article img{
     width: 20rem; /* 画像の幅を設定 */
     height: 20rem; /* 画像の高さを自動調整 */
     border-radius: 8px;
@@ -216,8 +201,19 @@ footer{
     height: 25rem; /* 画像の高さを自動調整 */
     border-radius: 8px;
     flex-shrink: 0;
+    margin-top:4rem;
+    margin-bottom:4rem;
 }
 
+#blog .blogContent .text h3{
+    margin-top:4rem;
+    margin-bottom:2rem;
+}
+
+
+#blog .blogContent .text p{
+    margin:0;
+}
 
 #contact{
     align-items: center;
