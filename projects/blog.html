@@ -10,7 +10,11 @@
 
 <body>
     <header>
-        <nav>
+        <div id="menu-button" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <nav id="menu" class="hidden">
+            
             <ul>
                 <li><a href="/index.html">About</a></li>
                 <li><a href="/projects/project.html">Project</a></li>
@@ -25,7 +29,7 @@
         <section id="blog">
             <h2>Blog</h2>
             <p></p>
-            <div class="article">
+            <div class="article fade-in">
                 <article>
                     <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="320" style="width:100%;max-width:320px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/playlist/pl.u-yZyVWd3sYklB1Zv"></iframe>
                     <h3>厳選お気に入り</h3>
@@ -72,7 +76,7 @@
             </svg>
         </a>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
 

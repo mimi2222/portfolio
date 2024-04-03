@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mimilog</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
     <header>
-        <nav>
+        <div id="menu-button" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <nav id="menu" class="hidden">
+            
             <ul>
                 <li><a href="/index.html">About</a></li>
                 <li><a href="/projects/project.html">Project</a></li>
@@ -71,7 +73,7 @@
             </svg>
         </a>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
 

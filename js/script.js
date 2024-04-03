@@ -41,3 +41,8 @@ window.addEventListener('load', function() {
     // オリジンが同じであれば、コンテンツの高さを取得して設定
     iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
 });
+
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("show");
+}
