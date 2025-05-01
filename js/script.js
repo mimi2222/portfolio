@@ -46,3 +46,30 @@ function toggleMenu() {
     var menu = document.getElementById("menu");
     menu.classList.toggle("show");
 }
+
+$(document).ready(function(){
+    $('#menu-button').click(function(){
+        $('main').toggleClass('transparent');
+        var panel = $(this).next('#menu');
+        if (panel.css("display") === "block") {
+            panel.css("display", "none");
+            //panel.fadeOut();
+            
+          } else {
+            //panel.css("display", "block");
+            panel.fadeIn();
+            
+          }
+    })
+})
+
+$('a[href^="#"]').click(function(event) {
+    event.preventDefault(); // デフォルトの動作を停止
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000); // 1000ミリ秒（1秒）かけてスクロール
+    }
+  });
+  
