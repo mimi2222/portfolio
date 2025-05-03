@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mizuki Ogawaのポートフォリオサイト。プロジェクト紹介、プロフィール、連絡先など。">
-    <title>mimilog</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>mizukiogawa</title>
+        <!-- ローカルとGitHub Pagesでパスを切り替えるためのJavaScript -->
+    <script>
+        // ローカルであれば、GitHub Pages用のbaseタグを追加
+        if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
+            var base = document.createElement('base');
+            base.href = '/portfolio/';
+            document.head.appendChild(base);
+        }
+    </script>
+    <script src="js/script.js"></script>
+    <!-- <base href="/portfolio/"> -->
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -23,10 +34,10 @@
         </div>
         <nav id="menu" aria-label="グローバルナビゲーション">
             <ul>
-                <li><a href="/index.html">About</a></li>
-                <li><a href="/projects/project.html">Project</a></li>
-                <li><a href="/projects/blog.html">Blog</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="projects/project.html">Project</a></li>
+                <li><a href="projects/blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -67,7 +78,5 @@
             </svg>
         </a>
     </footer>
-
-    <script src="/js/script.js"></script>
 </body>
 </html>
