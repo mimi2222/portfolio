@@ -7,18 +7,20 @@
     <title>mizukiogawa</title>
         <!-- ローカルとGitHub Pagesでパスを切り替えるためのJavaScript -->
     <script>
-        // ローカルであれば、GitHub Pages用のbaseタグを追加
         if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
             var base = document.createElement('base');
             base.href = '/portfolio/';
-            base.src = '/portfolio/';
             document.head.appendChild(base);
         }
     </script>
-    <script src="js/script.js"></script>
-    <!-- <base href="/portfolio/"> -->
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        const script = document.createElement("script");
+        script.src = "js/script.js";
+        script.defer = true; // これを入れると安全性アップ
+        document.head.appendChild(script);
+    </script>
 </head>
 <body>
     <!-- 背景動画が必要な場合は形式をmp4に統一推奨 -->
