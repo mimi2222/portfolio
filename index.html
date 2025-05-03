@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mizuki Ogawaのポートフォリオサイト。プロジェクト紹介、プロフィール、連絡先など。">
     <title>mimilog</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    
-    <!---<video autoplay muted loop id="backgroundVideo">
-        <source src="assets/background.mov" type="video/mp4">
+    <!-- 背景動画が必要な場合は形式をmp4に統一推奨 -->
+    <!--
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="assets/background.mp4" type="video/mp4">
         お使いのブラウザはビデオタグをサポートしていません。
-    </video>--->
+    </video>
+    -->
 
     <header>
-        
-        <div id="menu-button" class="accordion"> <!--アコーディオンにするために、onclick="toggleMenu()"を一時的に取り除いた-->
+        <div id="menu-button" class="accordion" onclick="toggleMenu()">
             &#9776;
         </div>
-        <nav id="menu">
-            
+        <nav id="menu" aria-label="グローバルナビゲーション">
             <ul>
                 <li><a href="/index.html">About</a></li>
                 <li><a href="/projects/project.html">Project</a></li>
@@ -34,25 +35,26 @@
         <section id="intro">
             <div class="text fade-in">
                 <h1>Mizuki Ogawa</h1>
-                <h1> 小川 美杉 </h1>
-                <h1>オガワミズキ</h1>
+                <p class="alt-name">小川 美杉 / オガワミズキ</p>
             </div>
             <div class="img fade-in">
-                <img src="assets/profile.JPG" alt="profile">
+                <img src="assets/profile.JPG" alt="Mizuki Ogawaのプロフィール写真">
             </div>
-            
         </section>
+
         <section id="profile" class="scroll">
-            <h3>Profile</h3>
-            <div class = "text">
-                <p>2021.4 enrolled in University of Tokyo </p>
-                <p>2023.4 enrolled in EEIC, Faculty of Engineering</p>
-                <p>2023.9 ~ 2024.5 exchange in University of British Columbia</p>
+            <h2>Profile</h2>
+            <div class="text">
+                <p>2021.4 東京大学 入学</p>
+                <p>2023.4 同大学 工学部 電子情報工学科 進学</p>
+                <p>2023.9 ~ 2024.5 カナダ・ブリティッシュコロンビア大学 交換留学</p>
+                <p>2025.4 同大学 苗村研究室 配属</p>
             </div>
         </section>
-        
     </main>
+
     <div class="divider"></div>
+
     <footer>
         <a href="https://www.linkedin.com/in/mizukiogawa0310/">
             <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24" fill="none">
@@ -65,6 +67,7 @@
             </svg>
         </a>
     </footer>
+
     <script src="/js/script.js"></script>
 </body>
 </html>

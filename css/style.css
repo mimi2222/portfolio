@@ -1,419 +1,307 @@
-/* リセットCSS */
-body, h1, h2, h3, p, ul, li, nav, section, article {
+/* ========== リセットCSS ========== */
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
-    color:black;
-    max-width:100%
-}
-
-body {
+    box-sizing: border-box;
+  }
+  
+  body {
     max-width: 100vw;
-    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
-    font-family:YuGothic;
+    font-family: 'Yu Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-}
-
-/* レイアウト */
-
-header {
+    color: #000;
+    background: #fff;
+  }
+  
+  /* ========== 共通要素 ========== */
+  h1, h2, h3, p {
+    font-weight: 600;
+  }
+  
+  ul, li {
+    list-style: none;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* ========== ヘッダー ========== */
+  header {
     padding: 1.5rem;
     text-align: center;
+  }
+  
+  #menu {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  #menu.show {
+    display: block;
+    background-color: white;
 }
-
-
-#menu{
-    display:none;
-    position:fixed;
-    z-index:1000; /*他の要素よりも前に出す*/
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    background:white;
-    font-size:2rem;
-    padding:2rem;
-}
-
-/*
-#menu.show{
-    display:block;
-}
-
-
-nav ul {
-    display: flex;
-    
-}
-
-nav ul li {
-    margin-right: 4rem;
-}
-*/
-
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-    font-family:YuGothic;
-}
-
-#menu-button {
+  
+  #menu-button {
     cursor: pointer;
     font-size: 30px;
     user-select: none;
     text-align: right;
-    padding:1%;
-}
-
-main {
+    padding: 1%;
+  }
+  
+  nav ul li a {
+    font-weight: 500;
+    line-height: 150%;
+    font-style: normal;
+  }
+  
+  /* ========== メイン ========== */
+  main {
     padding: 1rem;
-}
-
-#intro{
+  }
+  
+  /* ========== イントロ ========== */
+  #intro {
     margin-top: 4rem;
     display: flex;
-    flex-wrap:wrap;
-    align-items: center; /* 中央揃え */
-    gap:0;
-}
-
-#intro div{
-    flex-basis: 50%; /* 2列レイアウト */
-    text-align: center;  
+    flex-wrap: wrap;
     align-items: center;
-}
-
-.text h1{
+  }
+  
+  #intro div {
+    flex-basis: 50%;
     text-align: center;
-    padding: 1rem; 
+  }
+  
+  .text h1 {
+    padding: 1rem;
     font-size: 3rem;
-    font-family: Inter;
-    color: #000;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-family: Inter, sans-serif;
     letter-spacing: -1px;
-}
-
-.img img {
-    width: 24rem; /* 画像の幅を設定 */
-    height: auto; /* 画像の高さを自動調整 */
+  }
+  
+  .img img {
+    width: 24rem;
+    height: auto;
     border-radius: 10px;
     flex-shrink: 0;
-}
-
-#profile{
+  }
+  
+  /* ========== プロフィール ========== */
+  #profile {
     color: #828282;
-    margin-left:18rem;
-    margin-right:20rem;
-    margin-top:10rem;
-    margin-bottom:10rem;
-    font-family: Inter;
-}
-
-#profile h3{
-    padding: 1rem; 
-    font-size: 1.5rem;
-    color: #b2b2b2;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
-}
-
-#profile .text p{
-    padding: 0.1rem; 
+    margin: 10rem 20rem;
+    font-family: Inter, sans-serif;
+  }
+  
+  #profile h3,
+  #profile .text p {
+    padding: 1rem 0.1rem;
     font-size: 1rem;
     color: #b2b2b2;
-    font-style: normal;
-    font-weight: 600;
     line-height: 150%;
-}
-
-.divider {
-    border-top: 1px solid #e6e6e6; /* 灰色の薄い線 */
-    margin-bottom: 2rem; /* フッターとの間隔 */
-    position:relative;
-}
+  }
   
-
-footer{
-    display:flex;
-    position:relative;
-    flex-direction: row;
+  /* ========== 区切り線 ========== */
+  .divider {
+    border-top: 1px solid #e6e6e6;
+    margin-bottom: 2rem;
+  }
+  
+  /* ========== フッター ========== */
+  footer {
+    display: flex;
     justify-content: flex-start;
-    color: black;
     text-align: center;
     padding: 1rem;
-    bottom: 0;
-}
-
-
-#projects, #blog, #contact{
-    color: #000;
+  }
+  
+  /* ========== セクション共通 ========== */
+  #projects, #blog, #contact {
     margin: 5rem;
-    font-family: Inter;
-}
-
-#projects h2,#projects p, #blog h2, #contact, #blog .blogContent{
+    font-family: Inter, sans-serif;
+  }
+  
+  #projects h2, #blog h2 {
     margin-left: 3rem;
-}
-
-#projects h2, #blog h2{
     font-size: 2.5rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
     letter-spacing: -1px;
-}
-
-#projects p, #blog p{
-    margin-top:2rem;
-    margin-bottom: 5rem;
-}
-
-#projects .article, #blog .article, #blog .blogContent .contents{
+  }
+  
+  #projects p, #blog p {
+    margin: 2rem 3rem 5rem;
+  }
+  
+  #projects .article,
+  #blog .article,
+  #blog .blogContent .contents {
     display: flex;
     flex-wrap: wrap;
-}
-
-#projects .article article{
-    flex-basis: 50%; /* 2列レイアウト */
+  }
+  
+  #projects .article article,
+  #blog .article article,
+  #blog .blogContent .contents article {
+    flex-basis: 50%;
     text-align: center;
-}
-
-#blog .article article, #blog .blogContent .contents article{
+  }
+  
+  #blog .article article,
+  #blog .blogContent .contents article {
     flex-basis: 33.333%;
-    text-align: center;
-}
-
-#projects .article article h3, #blog .article article h3, #blog .blogContent .contents article h3{
-    margin:1rem;
-    font-size:1rem;
-}
-
-#projects .article article p, #blog .article article p, #blog .blogContent .contents article p{
-    margin-left:0rem;
-    font-size:1rem;
-}
-
-#projects .article article img{
-    width: 35rem; /* 画像の幅を設定 */
-    height: 20rem; /* 画像の高さを自動調整 */
+  }
+  
+  #projects .article article h3,
+  #blog .article article h3,
+  #blog .blogContent .contents article h3 {
+    margin: 1rem;
+    font-size: 1rem;
+  }
+  
+  #projects .article article p,
+  #blog .article article p,
+  #blog .blogContent .contents article p {
+    font-size: 1rem;
+  }
+  
+  /* ========== イメージ ========== */
+  #projects .article article img,
+  #blog .article article img,
+  #blog .blogContent .contents article img {
+    width: 20rem;
+    height: 20rem;
     border-radius: 8px;
     flex-shrink: 0;
-}
-
-#projects .article article iframe{
-    width:560px;
-    height:315px;
-}
-
-#projects .article a:hover, #blog .article a:hover, #blog .blogContent .contents a:hover{
-    border: none;
+  }
+  
+  #projects .article article iframe {
+    width: 560px;
+    height: 315px;
+  }
+  
+  #blog .blogContent .images {
+    text-align: center;
+  }
+  
+  #blog .blogContent .images img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 8px;
+    margin: 4rem 0;
+  }
+  
+  #projects .article a:hover,
+  #blog .article a:hover,
+  #blog .blogContent .contents a:hover {
     cursor: pointer;
-}
-
-#projects .article img:hover, #blog .article img:hover, #blog .blogContent .contents img:hover{
+  }
+  
+  #projects .article img:hover,
+  #blog .article img:hover,
+  #blog .blogContent .contents img:hover {
     transform: scale(1.05);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
-    transition: background-color 0.5s;
-}
-
-
-#blog .article article img, #blog .blogContent .contents article img{
-    width: 20rem; /* 画像の幅を設定 */
-    height: 20rem; /* 画像の高さを自動調整 */
-    border-radius: 8px;
-    flex-shrink: 0;
-}
-
-#blog .blogContent .images{
-    text-align: center;
-}
-
-#blog .blogContent .images img{
-    width: 25rem; /* 画像の幅を設定 */
-    height: 25rem; /* 画像の高さを自動調整 */
-    border-radius: 8px;
-    flex-shrink: 0;
-    margin-top:4rem;
-    margin-bottom:4rem;
-}
-
-#blog .blogContent .text h3{
-    margin-top:4rem;
-    margin-bottom:2rem;
-}
-
-
-#blog .blogContent .text p{
-    margin:0;
-}
-
-#contact{
-    align-items: center;
-}
-
-.embed{
-    display: flex;
-    justify-content: center; /* 水平方向の中央揃え */
-}
-
-.fade-in {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+  }
+  
+  /* ========== アニメーション ========== */
+  .fade-in {
     opacity: 0;
     transition: opacity 2s ease-in-out;
-}
-.fade-in.active {
+  }
+  
+  .fade-in.active {
     opacity: 1;
-}
-.scroll {
+  }
+  
+  .scroll {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.scroll.active {
+  }
+  
+  .scroll.active {
     opacity: 1;
     transform: none;
-}
-
-#backgroundVideo {
-    position: fixed; /* 画面に固定 */
+  }
+  
+  /* ========== 背景動画 ========== */
+  #backgroundVideo {
+    position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100; /* コンテンツの背後に配置 */
-    object-fit: cover; /* 画面いっぱいに動画を表示させる */
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
+    z-index: -100;
+    object-fit: cover;
+  }
+  
+  /* ========== レスポンシブ ========== */
+  @media (max-width: 768px) {
+    #intro .text h1 {
+      font-size: 1.3rem;
     }
-
-    /*
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-right: 0rem;
-    }
-    */
-
-    #intro .text h1{
-        text-align: center;
-        font-size: 1.3rem;
-        font-family: Inter;
-        color: #000;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        letter-spacing: -1px;
-    }
-    
+  
     #intro .img img {
-        width: 10rem; /* 画像の幅を設定 */
-        height: auto; /* 画像の高さを自動調整 */
-        border-radius: 10px;
-        flex-shrink: 0;
+      width: 10rem;
     }
-
+  
     #profile {
-        margin-left: 1rem;
-        margin-right: 0rem;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        font-size:0.8rem;
+      margin: 3rem 1rem 1rem;
+      font-size: 0.8rem;
     }
-
-    #projects, #blog, #contact{
-        color: #000;
-        margin: 0.5rem;
-        font-family: Inter;
+  
+    #projects, #blog, #contact {
+      margin: 0.5rem;
     }
-    
-    #projects h2,#projects p, #blog h2, #contact, #blog .blogContent{
-        margin-left: 0.5rem;
+  
+    #projects h2, #blog h2 {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
     }
-    
-    #projects h2, #blog h2{
-        font-size: 1.5rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: -1px;
+  
+    #projects p, #blog p {
+      margin: 0.6rem 0.5rem 1.2rem;
     }
-    
-    #projects p, #blog p{
-        margin-top:0.6rem;
-        margin-bottom: 1.2rem;
+  
+    #projects .article article,
+    #blog .article article,
+    #blog .blogContent .contents article {
+      flex-basis: 100%;
     }
-    
-    #projects .article, #blog .article, #blog .blogContent .contents{
-        display: flex;
-        flex-wrap: wrap;
+  
+    #projects .article article img,
+    #projects .article article iframe,
+    #blog .article article img,
+    #blog .blogContent .contents article img {
+      width: 20rem;
+      height: 15rem;
     }
-    
-    #projects .article article,#blog .article article, #blog .blogContent .contents article{
-        flex-basis: 100%; /* 2列レイアウト */
-        text-align: center;
+  
+    #blog .blogContent .images img {
+      width: 18rem;
+      height: 18rem;
     }
-   
-    #projects .article article h3, #blog .article article h3, #blog .blogContent .contents article h3{
-        margin:0.5rem;
-        font-size:1rem;
+  
+    #projects .article article h3,
+    #blog .article article h3,
+    #blog .blogContent .contents article h3 {
+      font-size: 1rem;
     }
-    
-    #projects .article article p, #blog .article article p, #blog .blogContent .contents article p{
-        margin-left:0rem;
-        font-size:0.8rem;
+  
+    #projects .article article p,
+    #blog .article article p,
+    #blog .blogContent .contents article p {
+      font-size: 0.8rem;
     }
-    
-    #projects .article article img,#projects .article article iframe{
-        width: 20rem; /* 画像の幅を設定 */
-        height: 15rem; /* 画像の高さを自動調整 */
-    }
-
-    #blog .article article img, #blog .blogContent .contents article img{
-        width: 20rem; /* 画像の幅を設定 */
-        height: 20rem; /* 画像の高さを自動調整 */
-    }
-
-    
-    #blog .blogContent .images{
-        text-align: center;
-    }
-    
-    #blog .blogContent .images img{
-        width: 18rem; /* 画像の幅を設定 */
-        height: 18rem; /* 画像の高さを自動調整 */
-        border-radius: 8px;
-        flex-shrink: 0;
-        margin-top:4rem;
-        margin-bottom:4rem;
-    }
-    
-    #blog .blogContent .text h3{
-        margin-top:1rem;
-        margin-bottom:1rem;
-    }
-    
-    
-    #blog .blogContent .text p{
-        margin:0;
-    }
-}
-
-.transparent{
-    opacity:0.1;
-    transition: 0.6s;
-}
+  }
+  
