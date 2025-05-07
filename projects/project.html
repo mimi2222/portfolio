@@ -5,35 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mizuki Ogawaのポートフォリオサイト。プロジェクト紹介、プロフィール、連絡先など。">
     <title>mizukiogawa</title>
-        <!-- ローカルとGitHub Pagesでパスを切り替えるためのJavaScript -->
+    <!-- GitHub Pages用のベースパス設定 -->
     <script>
         if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
-            var base = document.createElement('base');
-            base.href = '/portfolio/';
-            document.head.appendChild(base);
+            document.write('<base href="/portfolio/">');
         }
     </script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        const script = document.createElement("script");
-        script.src = "js/script.js";
-        script.defer = true; // これを入れると安全性アップ
-        document.head.appendChild(script);
-    </script>
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
     <header>
-        <div id="menu-button" onclick="toggleMenu()">
+        <div id="menu-button" class="accordion">
             &#9776;
         </div>
         <nav id="menu" class="hidden">
-            
             <ul>
-                <li><a href="/index.html">About</a></li>
-                <li><a href="/projects/project.html">Project</a></li>
-                <li><a href="/projects/blog.html">Blog</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="../index.html">About</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="../contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // スムーズスクロール (Vanilla JS)
+    // スムーズスクロール
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -16,33 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
         element.classList.add('active');
     });
 
-    // jQuery ハンバーガーメニュー
-    $('#menu-button').click(function () {
-        $('main').toggleClass('transparent');
-        const panel = $('#menu');
-        if (panel.css("display") === "block") {
-            panel.css("display", "none");
-        } else {
-            panel.fadeIn();
-        }
-    });
-
-    // jQuery スムーススクロール（重複防止のため確認）
-    $('a[href^="#"]').click(function (event) {
-        event.preventDefault();
-        const target = $(this.getAttribute('href'));
-        if (target.length) {
-            $('html, body').animate({ scrollTop: target.offset().top }, 1000);
-        }
-    });
-
-    // メニュー開閉関数のためのイベント設定（Vanilla JS）
+    // ハンバーガーメニューの実装
     const menuButton = document.getElementById("menu-button");
-    if (menuButton) {
-        menuButton.addEventListener("click", function () {
-            const menu = document.getElementById("menu");
-            if (menu) {
-                menu.classList.toggle("show");
+    const menu = document.getElementById("menu");
+    const main = document.querySelector("main");
+
+    if (menuButton && menu) {
+        menuButton.addEventListener("click", function() {
+            menu.classList.toggle("show");
+            if (main) {
+                main.classList.toggle("transparent");
             }
         });
     }
@@ -72,11 +55,3 @@ function reveal() {
     });
 }
 window.addEventListener("scroll", reveal);
-
-// toggleMenu 関数（HTMLのonclick用）
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-    if (menu) {
-        menu.classList.toggle("show");
-    }
-}
