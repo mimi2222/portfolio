@@ -6,14 +6,10 @@
     <meta name="description" content="Mizuki Ogawaのポートフォリオサイト。プロジェクト紹介、プロフィール、連絡先など。">
     <title>mizukiogawa</title>
     <!-- GitHub Pages用のベースパス設定 -->
-    <script>
-        if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
-            document.write('<base href="/portfolio/">');
-        }
-    </script>
-    <link rel="stylesheet" href="/portfolio/css/style.css">
+    <base href="/portfolio/">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/portfolio/js/script.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,10 +18,10 @@
         </div>
         <nav id="menu" class="hidden">
             <ul>
-                <li><a href="/portfolio/index.html">About</a></li>
-                <li><a href="/portfolio/projects/project.html">Project</a></li>
-                <li><a href="/portfolio/projects/blog.html">Blog</a></li>
-                <li><a href="/portfolio/contact.html">Contact</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="projects/project.html">Project</a></li>
+                <li><a href="projects/blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -37,21 +33,21 @@
             <div class="article fade-in">
                 <article>
                     <a href="https://editor.p5js.org/mimi2222/full/bDb2NIjCi">
-                        <img src="/portfolio/assets/imperfection.png" alt="Fusion">
-                    </a>                    
+                        <img src="assets/imperfection.png" alt="Fusion">
+                    </a>
                     <h3>Fusion</h3>
                     <p>p5.js, ChatGPT</p>
                 </article>
                 <article>
                     <a href="https://editor.p5js.org/mimi2222/full/phHpEYn-0">
-                        <img src="/portfolio/assets/zoom.png" alt="p5.jsで作成したZoom風UI">
-                    </a>                    
+                        <img src="assets/zoom.png" alt="p5.jsで作成したZoom風UI">
+                    </a>
                     <h3>Zoom</h3>
                     <p>p5.js</p>
                 </article>
                 <article>
                     <a>
-                        <img src="/portfolio/assets/chatroom.png" alt="chatroom">
+                        <img src="assets/chatroom.png" alt="chatroom">
                     </a>
                     <h3>NLP + Web Chat app</h3>
                     <p>HTML/CSS, JavaScript</p>
@@ -64,10 +60,7 @@
                     <p>Adobe Premiere Pro</p>
                 </article>
             </div>
-            
-    
         </section>
-
     </main>
     <div class="divider"></div>
     <footer>
@@ -82,6 +75,5 @@
             </svg>
         </a>
     </footer>
-    <!-- <script src="/js/script.js"></script> -->
 </body>
 </html>
