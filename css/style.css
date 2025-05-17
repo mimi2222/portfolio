@@ -32,23 +32,32 @@
     padding: 1.5rem;
     text-align: center;
   }
-  
+
+    /* 最初は非表示状態を作る */
   #menu {
-    display: none;
+    pointer-events: none;          /* クリック無効（任意）*/
+    opacity: 0;                    /* 透明 */
+    transform: translate(-50%, -50%) scale(.9); /* 少し小さく */
+    transition: opacity .35s ease, transform .35s ease;
+    
     position: fixed;
     z-index: 1000;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     background: #fff;
     font-size: 2rem;
-    padding: 2rem;
+    padding: 2rem 3rem;
+    border-radius: 1rem;           /* 角丸はお好みで */
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
   }
 
+  /* クリックで付け外しするクラス */
   #menu.show {
-    display: block;
-    background-color: white;
-}
+    pointer-events: auto;          /* クリック有効 */
+    opacity: 1;                    /* 不透明へ */
+    transform: translate(-50%, -50%) scale(1);  /* 等倍へ */
+  }
+
   
   #menu-button {
     cursor: pointer;
