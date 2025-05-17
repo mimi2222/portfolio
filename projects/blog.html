@@ -7,14 +7,10 @@
     <meta name="description" content="Mizuki Ogawaのポートフォリオサイト。プロジェクト紹介、プロフィール、連絡先など。">
     <title>mizukiogawa</title>
     <!-- GitHub Pages用のベースパス設定 -->
-    <script>
-        if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
-            document.write('<base href="/portfolio/">');
-        }
-    </script>
-    <link rel="stylesheet" href="../css/style.css">
+    <base href="/portfolio/">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/script.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -23,18 +19,16 @@
             &#9776;
         </div>
         <nav id="menu" class="hidden">
-            
             <ul>
-                <li><a href="../index.html">About</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="projects/project.html">Project</a></li>
+                <li><a href="projects/blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
         <section id="blog">
             <h2>Blog</h2>
             <p></p>
@@ -46,15 +40,15 @@
                 </article>
 
                 <article>
-                    <a href="../blogs/sketch.html">
-                        <img src="../assets/disney.png" alt="disney">
+                    <a href="blogs/sketch.html">
+                        <img src="assets/disney.png" alt="disney">
                     </a>
                     <h3>スケッチ</h3>
                     <p>04/01/2024</p>
                 </article>
                 <article>
-                    <a href="../blogs/book.html">
-                        <img src="../assets/book.png" alt="book">
+                    <a href="blogs/book.html">
+                        <img src="assets/book.png" alt="book">
                     </a>
                     <h3>読書</h3>
                     <p>03/27/2024</p>
@@ -66,11 +60,7 @@
                     <p>2023の終わり</p>
                 </article>
             </div>
-
         </section>
-
-        
-
     </main>
     <div class="divider"></div>
     <footer>
@@ -87,4 +77,3 @@
     </footer>
 </body>
 </html>
-
